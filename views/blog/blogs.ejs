@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Blog Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description website">
+  <meta name="author" content="Maksym Blank">
+  <meta name="keywords" content="website, with, meta, tags">
+  <meta name="robots" content="noindex, follow">
+  <meta name="revisit-after" content="5 month">
+  <meta name="image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:title" content="Title website">
+  <meta name="og:description" content="Description website">
+  <meta name="og:image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:site_name" content="My Website">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Title website">
+  <meta name="twitter:description" content="Description website">
+  <link href="/assets/css/plugins/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/slick.css" rel="stylesheet">
+  <link href="/assets/css/plugins/ion.rangeSlider.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/magnific-popup.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/fonts/flaticon/flaticon.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="btn-style-5 sigma_header-absolute btn-rounded sidebar-style-9">
+  <script src="/assets/js/nvb.js"></script>
+  <div id='nvbar'>
+  </div>
+  
+  <script>
+    nvb('last news');
+  </script>
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section section-padding">
+    <div class="container">
+      <div class="row">
+      
+        <% blog.forEach(element => { %>
+         
+            <div class="col-lg-4 col-md-6">
+            <article class="sigma_post style-15">
+              <div class="sigma_post-thumb">
+                <a href="/blog/<%= element.id %>">
+                  <img src="<%= element.image %> " alt="img">
+                </a>
+              </div>
+              <div class="sigma_post-body">
+                <div class="sigma_post-content">
+                  <div class="sigma_post-meta is-absolute">
+                    <a href="/blog/<%= element.id %>" class="sigma_post-date">
+  
+                      <%= element.date.toISOString().split('T')[0] %>
+  
+                    </a>
+                  </div>
+                  <div class="sigma_post-meta">
+                    <ul>
+                      <li>
+                        <a href="/blog/<%= element.id %>">
+                          <i class="fal fa-user"></i>
+                          By <%= element.writter%>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/blog/<%= element.id %>">
+                          <i class="fal fa-folder-open"></i>
+                          Air Transport
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <h5>
+  
+                    <a href="blog-details.html"><%= element.title %></a>
+  
+                  </h5>
+                </div>
+                <a href="/blog/<%= element.id %> " class="btn-link">
+  
+                  Read more
+  
+                </a>
+              </div>
+            </article>
+          </div>  
+
+  
+
+        <% }) %> 
+        
+        
+        <!--
+       
+        <div class="col-lg-4 col-md-6">
+          <article class="sigma_post style-15">
+            <div class="sigma_post-thumb">
+              <a href="blog-details.html">
+                <img src="/assets/img/blog-grid/350x300-2.jpg" alt="img">
+              </a>
+            </div>
+            <div class="sigma_post-body">
+              <div class="sigma_post-content">
+                <div class="sigma_post-meta is-absolute">
+                  <a href="blog-details.html" class="sigma_post-date">
+
+                    28 January, 2021
+
+                  </a>
+                </div>
+                <div class="sigma_post-meta">
+                  <ul>
+                    <li>
+                      <a href="blog-details.html">
+                        <i class="fal fa-user"></i>
+                        By Admin
+                      </a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html">
+                        <i class="fal fa-folder-open"></i>
+                        Air Transport
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <h5>
+
+                  <a href="blog-details.html">Having overw eight and depression can </a>
+
+                </h5>
+              </div>
+              <a href="#" class="btn-link">
+
+                Read more
+
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <article class="sigma_post style-15">
+            <div class="sigma_post-thumb">
+              <a href="blog-details.html">
+                <img src="/assets/img/blog-grid/350x300-3.jpg" alt="img">
+              </a>
+            </div>
+            <div class="sigma_post-body">
+              <div class="sigma_post-content">
+                <div class="sigma_post-meta is-absolute">
+                  <a href="blog-details.html" class="sigma_post-date">
+
+                    28 January, 2021
+
+                  </a>
+                </div>
+                <div class="sigma_post-meta">
+                  <ul>
+                    <li>
+                      <a href="blog-details.html">
+                        <i class="fal fa-user"></i>
+                        By Admin
+                      </a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html">
+                        <i class="fal fa-folder-open"></i>
+                        Air Transport
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <h5>
+
+                  <a href="blog-details.html">The connection between post-traumatic</a>
+
+                </h5>
+              </div>
+              <a href="#" class="btn-link">
+
+                Read more
+
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <article class="sigma_post style-15">
+            <div class="sigma_post-thumb">
+              <a href="blog-details.html">
+                <img src="/assets/img/blog-grid/350x300-4.jpg" alt="img">
+              </a>
+            </div>
+            <div class="sigma_post-body">
+              <div class="sigma_post-content">
+                <div class="sigma_post-meta is-absolute">
+                  <a href="blog-details.html" class="sigma_post-date">
+
+                    28 January, 2021
+
+                  </a>
+                </div>
+                <div class="sigma_post-meta">
+                  <ul>
+                    <li>
+                      <a href="blog-details.html">
+                        <i class="fal fa-user"></i>
+                        By Admin
+                      </a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html">
+                        <i class="fal fa-folder-open"></i>
+                        Air Transport
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <h5>
+
+                  <a href="blog-details.html">Adjusting to life with a spinal cord injury</a>
+
+                </h5>
+              </div>
+              <a href="#" class="btn-link">
+
+                Read more
+
+              </a>
+            </div>
+          </article>
+        </div> --> 
+      </div>
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <footer class="sigma_footer style-5 pb-0" id="footer"></footer>
+  <script>
+    footer()
+  </script>
+  <!--Section End-->
+  <script src="/assets/js/plugins/jquery-3.4.1.min.js"></script>
+  <script src="/assets/js/plugins/popper.min.js"></script>
+  <script src="/assets/js/plugins/bootstrap.min.js"></script>
+  <script src="/assets/js/plugins/jquery.instagramFeed.min.js"></script>
+  <script src="/assets/js/plugins/slick.min.js"></script>
+  <script src="/assets/js/plugins/imagesloaded.min.js"></script>
+  <script src="/assets/js/plugins/isotope.pkgd.min.js"></script>
+  <script src="/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/plugins/jquery.counterup.min.js"></script>
+  <script src="/assets/js/plugins/jquery.inview.min.js"></script>
+  <script src="/assets/js/plugins/ion.rangeSlider.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

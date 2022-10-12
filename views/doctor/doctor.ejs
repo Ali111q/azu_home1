@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Doctor Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description website">
+  <meta name="author" content="Maksym Blank">
+  <meta name="keywords" content="website, with, meta, tags">
+  <meta name="robots" content="noindex, follow">
+  <meta name="revisit-after" content="5 month">
+  <meta name="image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:title" content="Title website">
+  <meta name="og:description" content="Description website">
+  <meta name="og:image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:site_name" content="My Website">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Title website">
+  <meta name="twitter:description" content="Description website">
+  <link href="/assets/css/plugins/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/slick.css" rel="stylesheet">
+  <link href="/assets/css/plugins/ion.rangeSlider.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/magnific-popup.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/fonts/flaticon/flaticon.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="btn-style-5 sigma_header-absolute btn-rounded sidebar-style-9">
+  <!--Section Start-->
+  <!--Section Start-->
+
+  <script src="/assets/js/nvb.js"></script>
+      <div id='nvbar'>
+      </div>
+
+      <script>
+        nvb('doctor <%= doctor.name %>');
+      </script>
+  <!--Section End-->
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section sigma_post-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="sigma_post-details-inner">
+            <div class="entry-content">
+              <div class="sigma_team style-17 mb-0">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <div class="sigma_team-thumb">
+                      <img src="<%= doctor.profileImage %> " alt="team">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="sigma_team-body">
+                      <h5>
+
+                        <a href="#"><%= doctor.name %></a>
+
+                      </h5>
+                      <div class="sigma_rating">
+                        
+                        <% if (doctor.ratting==1) { %>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        <% } %>
+                        
+                        <% if (doctor.ratting==2) { %>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        <% } %>
+                        <% if (doctor.ratting==3) { %>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        <% } %>
+                      <% if (doctor.ratting==4) { %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      <% } %>
+                      <% if (doctor.ratting==5) { %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      <% } %>
+                        <span class="ml-3">(<%= doctor.rattingNumber %> )</span>
+                      </div>
+                      <div class="sigma_team-categories">
+                        <a href="#" class="sigma_team-category"><%= doctor.jobTitle %> </a>
+                      </div>
+                      <div class="sigma_team-info mt-4">
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="detail-menu-list">
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                    <div class="menu nav-item">
+                      <a href="#overview" class="nav-link active p-0">Overview</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="menu nav-item">
+                      <a href="#contact" class="nav-link p-0">Location &amp; Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="overview">
+                <h4>Overview Of <%=doctor.name%></h4>
+                <p>
+                 <%=doctor.body%>
+                </p>
+
+                <div class="spacer">
+                </div>
+                <h4>Subspecialities</h4>
+               
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="sigma_general-list style-3">
+                      <ul>
+                     
+                     <% doctor.Specialties.map((element, index) => { %>
+                      <% if (index==0) { %>
+                        <p>
+                        <%= doctor.Specialties[0] %> 
+                      </p>
+                      <% }else {  %>
+                     
+                       <li>
+                        <i class="far fa-check"></i>
+                        <span><%= element %> </span>
+                      </li>
+                      <% }%>
+                     
+                      
+                     <% }) %>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="sigma_general-list style-3">
+                      <ul>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="spacer">
+              </div>
+
+              <div class="spacer">
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="sidebar style-10 mt-5 mt-lg-0">
+            <!-- form Widget -->
+            <!-- form Widget 2 -->
+            <!-- Contact Widget -->
+            <div class="widget">
+              <h5 class="widget-title">Contact</h5>
+              <div class="widget-inner">
+                <div class="sigma_info style-24 p-0 shadow-none">
+                  <div class="sigma_info-title">
+                    <span class="sigma_info-icon bg-primary-1 text-white">
+
+                      <i class="fal fa-phone"></i>
+
+                    </span>
+                  </div>
+                  <div class="sigma_info-description">
+                    <h5>Our Phone</h5>
+                    <p>Phone: 0029129102320</p>
+                    <p>Mobile: 000 2324 39493</p>
+                  </div>
+                </div>
+                <div class="sigma_info style-24 p-0 shadow-none">
+                  <div class="sigma_info-title">
+                    <span class="sigma_info-icon bg-primary-1 text-white">
+
+                      <i class="fal fa-envelope-open-text"></i>
+
+                    </span>
+                  </div>
+                  <div class="sigma_info-description">
+                    <h5>Our Email</h5>
+                    <p>Email: doc@email.com</p>
+                    <p>Inquiries: info@orex.com</p>
+                  </div>
+                </div>
+                <div class="sigma_info style-24 p-0 shadow-none mb-0">
+                  <div class="sigma_info-title">
+                    <span class="sigma_info-icon bg-primary-1 text-white">
+
+                      <i class="fal fa-map-marker-alt"></i>
+
+                    </span>
+                  </div>
+                  <div class="sigma_info-description">
+                    <h5>Our Address</h5>
+                    <p>PSD Building, 2 Tower St, United States.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div id="contact">
+          <h4>Dr <%= doctor.name %> Location &amp; Contact Information</h4>
+          <div class="sigma_contact-wrapper">
+            <div class="sigma_contact-map">
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6669.90660867906!2d44.42519029999999!3d33.29388459999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2siq!4v1664869294422!5m2!1sen!2siq"
+             
+                height="600" allowfullscreen="">
+              </iframe>
+            </div>
+            <div class="sigma_contact-blocks">
+              <h5> Address</h5>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="sigma_contact-block style-3">
+                    <i class="fal fa-map-marker-alt icon"></i>
+                    <div class="contact-block-inner">
+                      <p>2416 Mapleview</p>
+                      <p class="mb-0">Tampa, FL 33634</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="sigma_contact-block style-3 mt-3 mt-md-0">
+                    <i class="fal fa-phone icon"></i>
+                    <div class="contact-block-inner">
+                      <p>0029129129129</p>
+                      <p class="mb-0">0029129129129</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="sigma_contact-block style-3 mt-3 mt-md-0">
+                    <i class="fal fa-globe icon"></i>
+                    <div class="contact-block-inner">
+                      <p>info@example.com</p>
+                      <p class="mb-0">www.docpoint.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar Start -->
+
+        <!-- Sidebar End -->
+      </div>
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <footer class="sigma_footer style-5 pb-0" id="footer"></footer>
+  <script>
+    footer()
+  </script>
+  <!--Section End-->
+  <script src="/assets/js/plugins/jquery-3.4.1.min.js"></script>
+  <script src="/assets/js/plugins/popper.min.js"></script>
+  <script src="/assets/js/plugins/bootstrap.min.js"></script>
+  <script src="/assets/js/plugins/jquery.instagramFeed.min.js"></script>
+  <script src="/assets/js/plugins/slick.min.js"></script>
+  <script src="/assets/js/plugins/imagesloaded.min.js"></script>
+  <script src="/assets/js/plugins/isotope.pkgd.min.js"></script>
+  <script src="/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/plugins/jquery.counterup.min.js"></script>
+  <script src="/assets/js/plugins/jquery.inview.min.js"></script>
+  <script src="/assets/js/plugins/ion.rangeSlider.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+
+</html>

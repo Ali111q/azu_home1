@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description website">
+  <meta name="author" content="Maksym Blank">
+  <meta name="keywords" content="website, with, meta, tags">
+  <meta name="robots" content="noindex, follow">
+  <meta name="revisit-after" content="5 month">
+  <meta name="image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:title" content="Title website">
+  <meta name="og:description" content="Description website">
+  <meta name="og:image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:site_name" content="My Website">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Title website">
+  <meta name="twitter:description" content="Description website">
+  <link href="assets/css/plugins/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/plugins/slick.css" rel="stylesheet">
+  <link href="assets/css/plugins/ion.rangeSlider.min.css" rel="stylesheet">
+  <link href="assets/css/plugins/magnific-popup.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link href="assets/fonts/flaticon/flaticon.css" rel="stylesheet">
+  <link href="assets/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="btn-style-5 sigma_header-absolute btn-rounded sidebar-style-3">
+  <script src="/assets/js/nvb.js"></script>
+  <div id='nvbar'>
+  </div>
+  
+  <script>
+    nvb('services');
+  </script>
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section section-padding">
+    <div class="container">
+      <div class="row">
+        <% service.forEach(element => { %>
+          <div class="col-lg-4 col-md-6">
+            <div class="sigma_service style-18 has-bg">
+              <div class="sigma_service-thumb">
+                <i class="flaticon-stethoscope"></i>
+              </div>
+              <div class="sigma_service-body">
+                <h5>
+  
+                  <a href="/service/<%= element.id %> "><%= element.title %></a>
+  
+                </h5>
+                <p><%= element.body %></p>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+     </div>
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section  pt-0">
+    <div class="container-fluid p-0">
+      <div class="sigma_instagram style-1 insta-images">
+        <div class="sigma_instagram-slider">
+          <a href="#">
+            <img src="assets/img/services/376x430.jpg" alt="img">
+          </a>
+          <a href="#">
+            <img src="assets/img/services/376x430-0.jpg" alt="img">
+          </a>
+          <a href="#">
+            <img src="assets/img/services/376x430-1.jpg" alt="img">
+          </a>
+          <a href="#">
+            <img src="assets/img/services/376x430-2.jpg" alt="img">
+          </a>
+          <a href="#">
+            <img src="assets/img/services/376x430-3.jpg" alt="img">
+          </a>
+          <a href="#">
+            <img src="assets/img/services/376x430-4.jpg" alt="img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section section-padding pt-0">
+    <div class="container">
+      <div class="section-title centered">
+        <span class="subtitle">Client Testimonials</span>
+        <h3 class="title">What Our Clients Say</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="sigma_testimonial style-13 text-left bg-white">
+            <div class="sigma_author-info">
+              <div class="sigma_testimonial-thumb mr-4">
+                <img src="assets/img/services/90x90.png" alt="testimonial">
+                <span class="fas fa-quote-left sigma_testimonial-icon"></span>
+              </div>
+              <div class="sigma_author-block">
+                <h5>
+                  Eugene Freeman
+                </h5>
+                <span class="sigma_testimonial-category">Tincidunt</span>
+              </div>
+            </div>
+            <div class="sigma_testimonial-body">
+              <p class="mb-0">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="sigma_testimonial style-13 text-left bg-white">
+            <div class="sigma_author-info">
+              <div class="sigma_testimonial-thumb mr-4">
+                <img src="assets/img/services/90x90-0.png" alt="testimonial">
+                <span class="fas fa-quote-left sigma_testimonial-icon"></span>
+              </div>
+              <div class="sigma_author-block">
+                <h5> Kelly Coleman </h5>
+                <span class="sigma_testimonial-category">Nulla nec</span>
+              </div>
+            </div>
+            <div class="sigma_testimonial-body">
+              <p class="mb-0">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <footer class="sigma_footer style-5 pb-0" id="footer"></footer>
+  <script>
+    footer()
+  </script>
+  <!--Section End-->
+  <script src="assets/js/plugins/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/plugins/popper.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/jquery.instagramFeed.min.js"></script>
+  <script src="assets/js/plugins/slick.min.js"></script>
+  <script src="assets/js/plugins/imagesloaded.min.js"></script>
+  <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+  <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/plugins/jquery.counterup.min.js"></script>
+  <script src="assets/js/plugins/jquery.inview.min.js"></script>
+  <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

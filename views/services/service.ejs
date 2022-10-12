@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Service Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description website">
+  <meta name="author" content="Maksym Blank">
+  <meta name="keywords" content="website, with, meta, tags">
+  <meta name="robots" content="noindex, follow">
+  <meta name="revisit-after" content="5 month">
+  <meta name="image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:title" content="Title website">
+  <meta name="og:description" content="Description website">
+  <meta name="og:image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:site_name" content="My Website">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Title website">
+  <meta name="twitter:description" content="Description website">
+  <link href="/assets/css/plugins/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/slick.css" rel="stylesheet">
+  <link href="/assets/css/plugins/ion.rangeSlider.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/magnific-popup.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/fonts/flaticon/flaticon.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+  <style>
+    .col-lg-8{
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="btn-style-5 sigma_header-absolute btn-rounded sidebar-style-9">
+  <!--Section Start-->
+  <script src="/assets/js/nvb.js"></script>
+      <div id='nvbar'>
+      </div>
+
+      <script>
+        nvb('Service Details');
+      </script>
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section sigma_post-details">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-8">
+          <div class="sigma_post-details-inner">
+
+            <div class="entry-content">
+              <img src="<%= service.firstImages[0] %> " alt="img">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="/assets/img/service-details/760x460.jpg" class="gallery-thumb">
+                    <img src="<%= service.firstImages[1] %>" alt="img">
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="/assets/img/service-details/760x460.jpg" class="gallery-thumb">
+                    <img src="<%= service.firstImages[2] %>" alt="post">
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="/assets/img/service-details/760x460.jpg" class="gallery-thumb">
+                    <img src="<%= service.firstImages[3] %>" alt="post">
+                  </a>
+                </div>
+              </div>
+              <h2 class="entry-title"><%=service.firstTitle%></h2>
+              <p>
+                <%=service.firstBody%>
+              </p>
+              <h5><%=service.secondTitle%></h5>
+              <p>
+                <%=service.secondBody%>
+
+              </p>
+              <a href="/assets/img/service-details/800x400.jpg" class="gallery-thumb">
+                <img src="<%=service.secondImages%>" alt="post">
+              </a>
+              <h4>
+                <%=service.thirdTitle%>
+              </h4>
+              <p>
+                <%=service.thirdBody%>
+                
+              </p>
+              <hr>
+              <h4><%=service.fourthTitle%>
+              </h4>
+              <p>
+                <%=service.fourthBody%>
+
+              </p>
+              <h4>Perks provided</h4>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="sigma_info style-2">
+                    <div class="sigma_info-title">
+                      <span class="sigma_info-icon bg-primary-light primary-color">
+                        <i class="far fa-user is_flaticon"></i>
+                      </span>
+                      <h5>
+                <%=service.perks[0]['title']%>
+                <a href="#"></a>
+                      </h5>
+                    </div>
+                    <div class="sigma_info-description">
+                      <p><%= service.perks[0]['body'] %></p>
+                    </div>
+                    <a href="#" class="btn-link primary-color">
+                      Learn More
+                      <i class="far fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="sigma_info style-2">
+                    <div class="sigma_info-title">
+                      <span class="sigma_info-icon bg-primary-light primary-color">
+                        <i class="far fa-user is_flaticon"></i>
+                      </span>
+                      <h5>
+                        <a href="#"><%= service.perks[1]['title'] %> </a>
+                      </h5>
+                    </div>
+                    <div class="sigma_info-description">
+                      <p><%= service.perks[1]['body'] %> </p>
+                    </div>
+                    <a href="#" class="btn-link primary-color">
+                      Learn More
+                      <i class="far fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <%= service.firstPerkBody %> 
+              </p>
+
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-lg-30">
+                  <p>
+                    <%= service.secondPerk['body'] %> 
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-6 col-6">
+                      <h6><%= service.firstPerkCircle['title'] %></h6>
+                      <div class="sigma_progress round sm">
+                        <span> <b class="counter" data-from="0" data-to="<%= service.firstPerkCircle['per'] %> ">33</b> <span class="primary-color">%</span> </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197 197" enable-background="new 0 0 197 197" xml:space="preserve">
+                          <% if (service.firstPerkCircle['per']) {  %>
+                            <% var firstNum = 700-  (service.firstPerkCircle['per'] *6 )  %> 
+                            <circle class="sigma_progress-stroke" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
+                            <circle class="sigma_progress-round" data-to="<%= firstNum %> " stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
+                            <% }  %>
+                             
+                         
+                     
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-6">
+                      <h6><%= service.secondPerkCircle['title'] %></h6>
+                      <div class="sigma_progress round sm">
+                        <span> <b class="counter" data-from="0" data-to="<%= service.secondPerkCircle['per'] %>">83</b> <span class="primary-color">%</span> </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197 197" enable-background="new 0 0 197 197" xml:space="preserve">
+                          <% if (service.secondPerkCircle['per']) {  %>
+                            <% var secondNum = 700-  (service.secondPerkCircle['per'] *6 )  %> 
+                          <circle class="sigma_progress-stroke" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
+                          <circle class="sigma_progress-round" data-to="<%= secondNum %> " stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
+                          <% }  %>
+
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <img src="<%= service.secondPerk['img'] %>" class="mb-0" alt="img">
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row align-items-center">
+                <div class="col-lg-5 mb-lg-30">
+                  <img src="<%= service.fifth['img'] %> " alt="details">
+                </div>
+                <div class="col-lg-7">
+                  <p>
+                    <%= service.fifth['body1'] %>
+                  </p>
+                </div>
+              </div>
+              <p>
+                <%= service.fifth['body2'] %>
+
+              </p>
+            </div>
+
+            <!-- Post Meta Start -->
+            <div class="sigma_post-details-meta">
+              <div class="sigma_post-details-meta-item sigma_post-share">
+                <h5>Share</h5>
+                <ul class="sigma_sm">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Post Meta End -->
+
+          </div>
+        </div>
+
+        <!-- Sidebar Start -->
+        <div class="col-lg-4">
+          <div class="sidebar">
+
+            <!-- Category Widget -->
+            <div class="widget widget-categories">
+              <h5 class="widget-title">Categories</h5>
+              <ul>
+                <li>
+                  <a href="#">
+                    Destinations
+                    <span>12</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Hotels
+                    <span>9</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    News
+                    <span>7</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Startup
+                    <span>5</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Strategy
+                    <span>3</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Recent services Widget -->
+            <div class="widget widget-sigma-recent-posts">
+              <h5 class="widget-title">Recent posts</h5>
+            <% blog.forEach(element => { %>
+                           <div class="sigma_recent-post">
+                <a href="/blog/<%=element.id%>" class="recent-post-image">
+                  <img src="<%= element.image %>" alt="img">
+                </a>
+                <div class="recent-post-descr">
+                  <h6>
+                    <a href="blog/<%=element.id%>"><%=element.title%></a>
+                  </h6>
+                  <a href="blog/<%=element.id%>" class="date">
+                    <i class="far fa-clock mr-2"></i>
+                    <%=element.date%>
+                  </a>
+                </div>
+              </div>
+            <% }) %>
+
+
+            </div>
+
+            <!-- Follow Widget -->
+            <div class="widget widget-follow">
+              <h5 class="widget-title">Follow Us</h5>
+              <div class="social-buttons">
+                <a href="#" class="btn-block sigma_btn">
+                  <div class="follow-icon d-flex align-items-center">
+                    <i class="fab fa-instagram"></i>
+                    <p class="mb-0">
+                      Instagram
+                      <span>225.5k Followers</span>
+                    </p>
+                  </div>
+                  <i class="fal fa-chevron-right"></i>
+                </a>
+                <a href="#" class="btn-block sigma_btn">
+                  <div class="follow-icon d-flex align-items-center">
+                    <i class="fab fa-twitter"></i>
+                    <p class="mb-0">
+                      Twitter
+                      <span>225.5k Followers</span>
+                    </p>
+                  </div>
+                  <i class="fal fa-chevron-right"></i>
+                </a>
+                <a href="#" class="btn-block sigma_btn">
+                  <div class="follow-icon d-flex align-items-center">
+                    <i class="fab fa-facebook-f"></i>
+                    <p class="mb-0">
+                      Facebook
+                      <span>225.5k Followers</span>
+                    </p>
+                  </div>
+                  <i class="fal fa-chevron-right"></i>
+                </a>
+                <a href="#" class="btn-block sigma_btn">
+                  <div class="follow-icon d-flex align-items-center">
+                    <i class="fab fa-youtube"></i>
+                    <p class="mb-0">
+                      Youtube
+                      <span>225.5k Followers</span>
+                    </p>
+                  </div>
+                  <i class="fal fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="widget widget-blockquote p-0 border-0">
+              <blockquote class="blockquote">
+                <cite>Request a Quote</cite>
+                <p>Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                <a href="contact-us.html" class="sigma_btn btn-sm">Request Quote</a>
+              </blockquote>
+            </div>
+
+            <!-- Subscribe Widget -->
+            <div class="widget widget-newsletter">
+              <h5 class="widget-title">Join Newsletter</h5>
+              <form method="post">
+                <input type="email" name="email" placeholder="Enter your email">
+                <button type="button" class="btn-block mt-4">Subscribe</button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Sidebar End -->
+
+      </div>
+
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <footer class="sigma_footer style-5 pb-0" id="footer"></footer>
+  <script>
+    footer()
+  </script>
+  <!--Section End-->
+  <script src="/assets/js/plugins/jquery-3.4.1.min.js"></script>
+  <script src="/assets/js/plugins/popper.min.js"></script>
+  <script src="/assets/js/plugins/bootstrap.min.js"></script>
+  <script src="/assets/js/plugins/jquery.instagramFeed.min.js"></script>
+  <script src="/assets/js/plugins/slick.min.js"></script>
+  <script src="/assets/js/plugins/imagesloaded.min.js"></script>
+  <script src="/assets/js/plugins/isotope.pkgd.min.js"></script>
+  <script src="/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/plugins/jquery.counterup.min.js"></script>
+  <script src="/assets/js/plugins/jquery.inview.min.js"></script>
+  <script src="/assets/js/plugins/ion.rangeSlider.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

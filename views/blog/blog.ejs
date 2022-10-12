@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Blog Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description website">
+  <meta name="author" content="Maksym Blank">
+  <meta name="keywords" content="website, with, meta, tags">
+  <meta name="robots" content="noindex, follow">
+  <meta name="revisit-after" content="5 month">
+  <meta name="image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:title" content="Title website">
+  <meta name="og:description" content="Description website">
+  <meta name="og:image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:site_name" content="My Website">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Title website">
+  <meta name="twitter:description" content="Description website">
+  <link href="/assets/css/plugins/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/slick.css" rel="stylesheet">
+  <link href="/assets/css/plugins/ion.rangeSlider.min.css" rel="stylesheet">
+  <link href="/assets/css/plugins/magnific-popup.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/fonts/flaticon/flaticon.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="btn-style-5 sigma_header-absolute btn-rounded sidebar-style-9">
+
+<!--Section Start-->
+<script src="/assets/js/nvb.js"></script>
+<div id='nvbar'>
+</div>
+
+<script>
+  nvb('writter by <%= blog.writter %>');
+</script>
+<!--Section End-->
+<!--Section Start-->
+<div class="section pb-0 sigma_post-details style-6">
+  <div class="container">
+    <div class="row" id="row">
+
+
+
+
+
+
+
+
+
+      <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+
+
+
+      <!-- hear -->
+
+      <div class="col-lg-8">
+
+        <div class="sigma_post-details-inner">
+          <div class="entry-content" id="addpost">
+            <div class="entry-content" id="addpost">
+
+
+
+              <a class="gallery-thumb">
+                <img src="<%= blog.image %> "
+                  alt="post">
+                </a>
+              <div class="sigma_post-details-meta">
+                <span> April 7, 2022,
+                  <i class="far fa-calendar-alt"></i>
+                </span>
+                <span>
+                   <a href="<%= blog.source %> "> <%= blog.writter %> </a>
+                  </span>
+                </div>
+              <h2 class="entry-title"><%= blog.title %> </h2>
+
+
+              <p><%= blog.body %> </p>
+              <blockquote>
+                <a href="<%= blog.source %> "> Read more</a>
+              </blockquote>
+            </div>
+
+
+
+          </div>
+          <hr>
+          <!-- Post Meta Start -->
+          <div class="sigma_post-details-meta">
+
+            <!-- <div class="sigma_post-details-meta-item sigma_post-share">
+              <h5 class="mb-0">Share:</h5>
+              <ul class="sigma_sm ml-4">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+          <!-- Post Meta End -->
+          <!-- Comments Start -->
+          <!-- Comments End -->
+        </div>
+      </div>
+
+
+      <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+
+
+
+      <!-- hear -->
+      <!-- Sidebar Start -->
+      <div class="col-lg-4">
+        <div class="sidebar style-8">
+          <!-- Search Widget -->
+
+          <!-- Category Widget -->
+
+          <!-- Archive Widget -->
+          <!-- Recent Posts Widget -->
+          <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+          <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+          <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+
+
+          <div class="widget widget-sigma-recent-posts">
+            <h5 class="widget-title">Recent News</h5>
+            
+          <% blogs.forEach(element => { %>
+            <div class="sigma_recent-post">
+              <a href="/blog/<%= element.id %> " class="recent-post-image">
+                <img src="/blog/<%= element.image %> " alt="img">
+              </a>
+              <div class="recent-post-descr">
+                <h6>
+
+                  <a href="/blog/<%= element.id %> "><%= element.title %> </a>
+
+                </h6>
+                <a href="/blog/<%= element.id %> " class="date">
+                  <i class="far fa-calendar-alt mr-2"></i>
+                  <%= element.date.toISOString().split('T')[0] %> 
+                </a>
+              </div>
+            </div>    
+          <% }) %>
+                    
+          </div>
+
+
+
+
+          <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+          <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+          <!-- class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8"class="col-lg-8" -->
+
+          <!-- Tags Widget -->
+          <div class="widget tagcloud">
+            <h5 class="widget-title">Popular Tags</h5>
+            <a href="#">Destination</a>
+            <a href="#">Hotels</a>
+            <a href="#">News</a>
+            <a href="#">Startup</a>
+            <a href="#">Strategy</a>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar End -->
+    </div>
+  </div>
+</div>
+<!--Section End-->
+<!--Section Start-->
+<footer class="sigma_footer style-5 pb-0" id="footer"></footer>
+<script>
+  footer()
+</script>
+<!--Section End-->
+<script src="/assets/js/plugins/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/plugins/popper.min.js"></script>
+<script src="/assets/js/plugins/bootstrap.min.js"></script>
+<script src="/assets/js/plugins/jquery.instagramFeed.min.js"></script>
+<script src="/assets/js/plugins/slick.min.js"></script>
+<script src="/assets/js/plugins/imagesloaded.min.js"></script>
+<script src="/assets/js/plugins/isotope.pkgd.min.js"></script>
+<script src="/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/plugins/jquery.counterup.min.js"></script>
+<script src="/assets/js/plugins/jquery.inview.min.js"></script>
+<script src="/assets/js/plugins/ion.rangeSlider.min.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+
+</html>

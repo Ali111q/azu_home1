@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description website">
+  <meta name="author" content="Maksym Blank">
+  <meta name="keywords" content="website, with, meta, tags">
+  <meta name="robots" content="noindex, follow">
+  <meta name="revisit-after" content="5 month">
+  <meta name="image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:title" content="Title website">
+  <meta name="og:description" content="Description website">
+  <meta name="og:image" content="http://mywebsite.com/image.jpg">
+  <meta name="og:site_name" content="My Website">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Title website">
+  <meta name="twitter:description" content="Description website">
+  <link href="assets/css/plugins/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/plugins/slick.css" rel="stylesheet">
+  <link href="assets/css/plugins/ion.rangeSlider.min.css" rel="stylesheet">
+  <link href="assets/css/plugins/magnific-popup.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link href="assets/fonts/flaticon/flaticon.css" rel="stylesheet">
+  <link href="assets/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="btn-style-5 sigma_header-absolute btn-rounded sidebar-style-9">
+  <script src="/assets/js/nvb.js"></script>
+  <div id='nvbar'>
+  </div>
+  
+  <script>
+    nvb('feq');
+  </script>
+  <!--Section End-->
+  <!--Section Start-->
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="sigma_accordion style-13">
+            <div class="sigma_tab-item style-4">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+            
+<% data.forEach((e,index)=>{%>
+ 
+<li class="nav-item">
+                  <a class="nav-link " id="tab-<%= index %>" data-toggle="tab" href="#faq-tab-<%= index %>" role="tab" aria-controls="tab-<%= index %>" aria-selected="true">
+
+                    <%= e.title %> 
+
+                    <i class="fal fa-chevron-right"></i>
+                  
+                  </a>
+                </li>
+                <% }) %>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tab-content mt-5 mt-lg-0" id="myTabContent">
+            <% data.forEach((element,index) => { %>
+ <div class="tab-pane fade" id="faq-tab-<%= index %>" role="tabpanel" aria-labelledby="tab-<%= index %>">
+              <div class="sigma_accordion style-13">
+                <div class="accordion" id="accordionExample<%= index %>">
+                  <% element.list.forEach((e,i) => { %>
+
+  <div class="card">
+                    <div class="card-header" id="h-25">
+                      <h5 class="mb-0">
+
+                        <button class="accordion-link" type="button" data-toggle="collapse" data-target="#rtfygu<%= i %>" aria-expanded="true" aria-controls="rtfygu<%= i %>">
+
+                          <%= e.qu %> 
+
+                        </button>
+
+                      </h5>
+                    </div>
+                    <div id="rtfygu<%= i %>" class="collapse show" aria-labelledby="h-25" data-parent="#accordionExample<%= index %>">
+                      <div class="card-body">
+                        <%= e.answer %> 
+                      </div>
+                    </div>
+                  </div>
+                    <% }) %> 
+                 
+                </div>
+              </div>
+            </div>
+
+   <% }) %> 
+   
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Section End-->
+  <!--Section Start-->
+  <footer class="sigma_footer style-5 pb-0" id="footer"></footer>
+  <script>
+    footer()
+  </script>
+  <!--Section End-->
+  <script src="assets/js/plugins/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/plugins/popper.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/jquery.instagramFeed.min.js"></script>
+  <script src="assets/js/plugins/slick.min.js"></script>
+  <script src="assets/js/plugins/imagesloaded.min.js"></script>
+  <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+  <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/plugins/jquery.counterup.min.js"></script>
+  <script src="assets/js/plugins/jquery.inview.min.js"></script>
+  <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
