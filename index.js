@@ -179,6 +179,6 @@ app.post("/register", async (req, res) => {
     // Our register logic ends here
   });
 
-app.listen(8080, () => {
+app.listen(80, () => {
     console.log(`Server Started at ${4000}`)
 })
