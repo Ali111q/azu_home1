@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
 const routes = require('./routes/routes');
-
+const http = require('https')
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
@@ -14,7 +14,6 @@ const jwt = require('jsonwebtoken');
 const User = require('./model/user_model')
 const bcrypt = require('bcryptjs')
   
-
 
 mongoose.connect(mongoString);
 const database = mongoose.connection;
@@ -27,6 +26,8 @@ database.once('connected', () => {
     console.log('Database Connected');
 })
 const app = express();
+const server = http.createServer(app)
+
 app.use(fileUpload({
     createParentPath: true
 }));
@@ -178,7 +179,13 @@ app.post("/register", async (req, res) => {
     }
     // Our register logic ends here
   });
+  const PORT = process.env.PORT; 
 
-app.listen(8080, () => {
-    console.log(`Server Started at ${4000}`)
+// server.listen(PORT,()=>{
+//   console.log('rgthj');
+// })
+
+app.listen(PORT,()=>{
+  console.log(PORT);
 })
+
