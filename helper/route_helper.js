@@ -1,13 +1,13 @@
 
 //################# Start post ######################
 
-function postRoute(route,model, router){
+function postRoute(route,model, router ,isEmail){
     router.post(route, async (req, res) => {
         
         var data=new model (req.body)
         const token = req.headers.authorization;
         
-        if (token) {
+        if (token ||isEmail) {
            try {
             const dataToSave = await data.save();
             res.status(200).json(dataToSave)
@@ -32,11 +32,11 @@ function postRoute(route,model, router){
 
 //################# Start get all ######################
 
- function getRoute(route, routeModel,router ){
+ function getRoute(route, routeModel,router){
     router.get(route, async (req, res) => {
         console.log('poiuyguiop');
-        const token = req.headers.authorization;
-        if (token) {
+         const token = req.headers.authorization;
+        if (token ) {
 
     try{
         const data = await routeModel.find();

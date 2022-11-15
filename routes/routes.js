@@ -211,8 +211,8 @@ helper.deleteRoute('/deleteServies',serviesModel,router)
 //
 //
 //-----------------------email-------------------------------------------------email--
-helper.postRoute('/addSubscripe',subscripeModel,router)
-helper.getRoute('/getSubscripes',subscripeModel,router)
+helper.postRoute('/addSubscripe',subscripeModel,router,true)
+helper.getRoute('/getSubscripes',subscripeModel,router, true)
 module.exports = router;
 
 
