@@ -13,6 +13,7 @@ const viewRouter= require('./routes/viewsRoutes')
 const jwt = require('jsonwebtoken');
 const User = require('./model/user_model')
 const bcrypt = require('bcryptjs')
+const path = require("path")
   
 
 mongoose.connect(mongoString);
@@ -53,8 +54,9 @@ app.use(express.static('uploads'));
 
 
 app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname , "build")))
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(path.join( __dirname + '/')));
 
 
 app.get("/user/validateToken", (req, res) => {
@@ -179,7 +181,7 @@ app.post("/register", async (req, res) => {
     }
     // Our register logic ends here
   });
-  const PORT = process.env.PORT; 
+  const PORT = process.env.PORT||3000; 
 
 // server.listen(PORT,()=>{
 //   console.log('rgthj');
