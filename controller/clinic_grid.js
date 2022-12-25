@@ -249,7 +249,7 @@
 
 var clinics=[];
  async function doctorCreate (){
-     const response = await fetch('http://home.azu-app.com/api/getClinics',{
+     const response = await fetch('http://health.azu-app.com/api/getClinics',{
         headers: {
             "Authorization":"Bearer 1205|FpsGq1tVszAy4piSTiQQd9kPNcizD3597htAXoBp"
         }
