@@ -2,6 +2,8 @@
 
 const express = require('express');
 require('dotenv').config({ path: './config.env' });
+var https = require("https");
+var fs = require("fs");
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
 const routes = require('./routes/routes');
@@ -188,7 +190,22 @@ app.post("/register", async (req, res) => {
 //   console.log('rgthj');
 // })
 
-app.listen(PORT,()=>{
-  console.log(PORT);
-})
+// app.listen(PORT,()=>{
+//   console.log(PORT);
+// })
 
+
+
+https
+  .createServer(
+    {
+      key: fs.readFileSync("server.key"),
+      cert: fs.readFileSync("server.cert"),
+    },
+    app
+  )
+  .listen(PORT, function () {
+    console.log(
+      "Example app listening on port 3000! Go to https://localhost:3000/"
+    );
+  });
