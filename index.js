@@ -190,25 +190,41 @@ app.post("/register", async (req, res) => {
 //   console.log('rgthj');
 // })
 
-// app.listen(PORT,()=>{
-//   console.log(PORT);
-// })
+  app.listen(PORT,()=>{
+    console.log(PORT);
+  })
 
 
 
-https
-  .createServer(
-    {
-      key: fs.readFileSync("server.key"),
-      cert: fs.readFileSync("server.cert"),
-    },
-    app
-  )
-  .listen(PORT, function () {
-    console.log(
-      "Example app listening on port 3000! Go to https://localhost:3000/"
-    );
-  });
+
+// https
+//   .createServer(
+//     {
+//       key: fs.readFileSync("server.key"),
+//       cert: fs.readFileSync("server.cert"),
+//     },
+//     app
+//   )
+//   .listen(PORT, function () {
+//     console.log(
+//       "Example app listening on port 3000! Go to https://localhost:3000/"
+//     );
+//   });
+
+// https
+//   .createServer(
+//     {
+//       key: fs.readFileSync("server.key"),
+//       cert: fs.readFileSync("server.cert"),
+//     },
+//     app
+//   )
+//   .listen(PORT, function () {
+//     console.log(
+//       "Example app listening on port 3000! Go to https://localhost:3000/"
+//     );
+//   });
+
 
 
   //http://185.77.96.67:2086
