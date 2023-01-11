@@ -248,8 +248,11 @@ d6.appendChild(asee);
 
 
 async function doctorCreate (){var doctors=[];
-    const response = await fetch('http://localhost:4000/api/getDoctors',{
-        mode:'no-cors'
+    const response = await fetch('http://health.azu-app.com/api/getDoctors',{
+        headers:{
+            "Authorization":"Bearer 1205|FpsGq1tVszAy4piSTiQQd9kPNcizD3597htAXoBp"
+
+        }
     });
     const json = await response.json();
     doctors = json

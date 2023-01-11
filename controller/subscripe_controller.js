@@ -4,7 +4,7 @@ function myFunction(body) {
 
 
         // xhr initiealize 
-        var url = "http://localhost:4000/api/addSubscripe";
+        var url = "http://health.azu-app.com/api/addSubscripe";
         var xhr = new XMLHttpRequest();
         xhr.open("POST", url);
 
