@@ -1,6 +1,9 @@
-require('dotenv').config({ path: './config.env' });
+
 
 const express = require('express');
+require('dotenv').config({ path: './config.env' });
+var https = require("https");
+var fs = require("fs");
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
 const routes = require('./routes/routes');
@@ -13,6 +16,7 @@ const viewRouter= require('./routes/viewsRoutes')
 const jwt = require('jsonwebtoken');
 const User = require('./model/user_model')
 const bcrypt = require('bcryptjs')
+const path = require("path")
   
 
 mongoose.connect(mongoString);
@@ -53,8 +57,9 @@ app.use(express.static('uploads'));
 
 
 app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname , "build")))
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(path.join( __dirname + '/')));
 
 
 app.get("/user/validateToken", (req, res) => {
@@ -179,7 +184,7 @@ app.post("/register", async (req, res) => {
     }
     // Our register logic ends here
   });
-  const PORT = process.env.PORT; 
+  const PORT = process.env.PORT||3000; 
 
 // server.listen(PORT,()=>{
 //   console.log('rgthj');
@@ -189,3 +194,23 @@ app.listen(PORT,()=>{
   console.log(PORT);
 })
 
+
+
+// https
+//   .createServer(
+//     {
+//       key: fs.readFileSync("server.key"),
+//       cert: fs.readFileSync("server.cert"),
+//     },
+//     app
+//   )
+//   .listen(PORT, function () {
+//     console.log(
+//       "Example app listening on port 3000! Go to https://localhost:3000/"
+//     );
+//   });
+
+
+  //http://185.77.96.67:2086
+  //http://185.77.96.67:2082
+  //ssh root@185.77.96.67
